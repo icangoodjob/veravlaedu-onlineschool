@@ -91,17 +91,6 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 
-	// const dateBox = document.querySelector('.popup-form__box');
-	// document.addEventListener('click', datefoo);
-	// function datefoo (event){
-	// 	if (event.target.closest('.input__date')){
-	// 		dateBox.classList.add('active');
-	// 	};
-	// 	if (!event.target.closest('.popup-form__box')){
-	// 		dateBox.classList.remove('active');
-	// 	};
-	// };
-
 	// Календарь
 	$('.datepicker-here').each(function() {
 		$(this).datepicker({
@@ -111,7 +100,6 @@ window.addEventListener("DOMContentLoaded", function() {
 			autoclose: true,
 		});
 	});
-
 	$('.datepicker-here').click(function(e) {
 		e.stopPropagation();
 		$('.datepicker').addClass('active');
@@ -122,9 +110,8 @@ window.addEventListener("DOMContentLoaded", function() {
 		$('.popup-form__date-arrow').removeClass('transform');
 	});
 
-
+// Фиксированная шапка при скролле
 const header = document.querySelector('header');
-
 window.addEventListener('scroll', function(){
 	if (window.scrollY >= 50 && !header.classList.contains('scrolled')){
 		header.classList.add('scrolled');
